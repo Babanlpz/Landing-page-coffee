@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*######################*/
+/* Global */
+/*######################*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --light: #f1f1f1;
+  --text: #070707;
+  --accent: #a76848;
+  --accent-2: rgb(63, 40, 29);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: var(--text);
+}
+
+section {
+  padding: 50px 100px;
+}
+
+.btn {
+  padding: 10px;
+  background: var(--accent);
+  border-radius: 7px;
+  color: var(--light);
+  transition: background 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--accent-2);
+}
+/*######################*/
+/* Navbar */
+/*######################*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 100px;
+  transition: 0.5s ease-in-out;
+}
+
+nav.active {
+  background: var(--text);
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--light);
+}
+
+#burger {
+  font-size: 1.5rem;
+  display: none;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  padding: 8px 17px;
+  color: var(--light);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+nav .bx {
+  color: var(--light);
+}
+.nav-icons {
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  column-gap: 0.8rem;
+}
+
+.navbar a:hover,
+.nav-icons .bx:hover {
+  color: var(--accent);
+}
+
+.search-container {
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  transform: translate(-50%);
+  background: var(--light);
+  width: 100%;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-container.active {
+  left: 50%;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.search-container input::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8a8a8a;
+}
+
+/*######################*/
+/*  Home */
+/*######################*/
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: no-repeat center/cover url("./images/fond.jpg");
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.home-content h1 {
+  font-size: clamp(30px, 4vw, 60px);
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.home-content p {
+  font-size: 1rem;
+  color: var(--light);
+  margin: 0.5rem 0 1.4rem;
+}
+
+.home-img {
+  width: 400px;
+}
+
+/*######################*/
+/*  About */
+/*######################*/
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.about-img {
+  border-radius: 7px;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
